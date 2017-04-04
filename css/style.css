@@ -91,7 +91,7 @@ hr{max-width: 50px;
 /* ---------------------------------------------------------------------------- */
 /* ----------------------------------Header------------------------------------ */
 /* ---------------------------------------------------------------------------- */
-header {background: url(../images/banner1.jpg) no-repeat scroll center center ;-webkit-background-size: cover;-moz-background-size: cover;background-size: cover;-o-background-size: cover;height: 750px;}
+header {background: url(../images/banner1-min.jpg) no-repeat scroll center center ;-webkit-background-size: cover;-moz-background-size: cover;background-size: cover;-o-background-size: cover;height: 750px;}
 @media all and (max-width: 660px) {
   /* =Header
   -------------------------------------------------------------- */
