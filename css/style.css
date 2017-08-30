@@ -1,3 +1,6 @@
+div {
+	width: 100%;
+}
 .bar-balanced {
 	box-shadow9: 0px 5px 5px grey;
 }
@@ -11,5 +14,5 @@
 th {
 	text-align: center;
 	border: 1px solid;
-	padding: 4px;
+	padding: 5px;
 }
