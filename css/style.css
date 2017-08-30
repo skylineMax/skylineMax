@@ -1,9 +1,15 @@
 .bar-balanced {
-	box-shadow: 0px 5px 5px grey;
+	box-shadow9: 0px 5px 5px grey;
 }
 
 .item.item-avatar-left {
 	border-top-left-radius: 10px !important;
 	border-top-right-radius: 10px !important;
 	background: lightgreen;
+}
+
+th {
+	text-align: center;
+	border: 1px solid;
+	padding: 4px;
 }
