@@ -1,0 +1,386 @@
+@import "includes/settings";
+@import "smart-grid";
+
+@include reset();
+
+.clearfix {
+  @include clearfix();
+}
+.wrapper {
+  @include wrapper();
+  font-family: 'Montserrat', sans-serif;
+  .info {
+    h1 {
+      letter-spacing: 2px;
+    }
+  }
+}
+body {
+  width: 100%;
+  font-weight:bold;
+}
+header {
+  @include background('../img/header_bg.jpg');
+  height: 900px;
+  max-width: 100%;
+  @include row-flex();
+  .logo1 {
+    @include col();
+    @include size(2);
+    @include col-float();
+
+    padding-top:50px;
+  }
+  .menu {
+    @include col();
+    @include size(12);
+    }
+}
+.overlay {
+  width: 100%;
+  height:900px;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.menu {
+  padding-top:66px;
+  li {
+    &:first-child {
+      padding-left:150px;
+    }
+    float: left;
+    padding-left:30px;
+    a {
+      &:hover {
+        color: $btn;
+      }
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+.hello {
+  @include row-flex();
+
+  margin-top:240px;
+  div {
+    @include row-flex();
+    @include size(12);
+    h3 {
+      @include col();
+      @include size(2);
+      font-size: 26px;
+      font-weight:bold;
+    }
+    a {
+      @include col();
+      @include size(2);
+      margin-top: -10px;
+      margin-left: -50px;
+    }
+    color:$btn;
+    font-weight:bold;
+  }
+  h1 {
+    @include col();
+    @include size(12);
+    margin-top:22px;
+    color:#fff;
+    font-size: 36px;
+    font-weight:bold;
+  }
+  button {
+    margin-top:45px;
+  }
+}
+.title {
+   h1 {
+     text-align: center;
+     @include font(36px,bold);
+   }
+   p {
+     margin-top: 30px;
+     text-align: center;
+     @include font(10px,normal);
+   }
+ }
+  .btn {
+    &:hover {
+      color:$btn;
+      background-color: #fff;
+      border: 1px solid $btn;
+    }
+
+    background-color: $btn;
+    border: 1px solid $btn;
+    color: #fff;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight:bold;
+  }
+
+  #about_me {
+    @include row-flex();
+    h1 {
+      @include col();
+      @include size(12);
+      text-align: center;
+      margin-top: 100px;
+      @include font(30px,bold);
+    }
+    p {
+      @include col();
+      @include size(12);
+      text-align: center;
+      margin-top: 30px;
+      @include font(10px,normal);
+    }
+
+    .about-info {
+      @include row-flex();
+
+      .img {
+        @include col();
+        @include size(5);
+        @include size-md(12);
+        img {
+          padding-top:23px;
+        }
+      }
+      .info {
+        @include col();
+        @include size(7);
+        @include size-md(12);
+
+        h1 {
+          @include font(14px,bold);
+          text-align: left;
+        }
+        .br_bot {
+          padding-bottom: 24px;
+          border-bottom: 3px solid $btn;
+        }
+        p {
+          margin-top:60px;
+          text-align: left;
+        }
+
+        .address {
+          margin-top: 34px;
+          span {
+            display: block;
+            margin-bottom: 20px;
+            @include font(10px,bold);
+
+            .fa {
+              color: $btn;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #hire {
+    @include row-flex();
+    height: 300px;
+    max-width: 100%;
+    background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
+    background-size: cover;
+    h1 {
+      @include font(20px,bold);
+      text-align: center;
+      margin-top:95px;
+      color: #fff;
+    }
+    .btnh {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .btn {
+        margin-top: 45px;
+      }
+    }
+  }
+
+  #services {
+    padding:100px 0;
+
+    .items {
+      @include row-flex();
+      @include justify-content(center);
+      margin-top: 60px;
+
+      .item {
+        @include col();
+        @include col-4();
+        @include col-md-6();
+        @include size-xs(12);
+        padding-right: 30px;
+        padding-bottom:15px;
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+#contact-me {
+  @include row-flex();
+  height: 300px;
+  max-width: 100%;
+  background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
+  background-size: cover;
+  h1 {
+    @include font(20px,bold);
+    text-align: center;
+    margin-top:95px;
+    color: #fff;
+  }
+  .btnh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .btn {
+      margin-top: 45px;
+    }
+  }
+}
+
+#team {
+  padding: 100px 0;
+  .team-members {
+    @include row-flex();
+    @include justify-content(center);
+    margin-top: 60px;
+
+    .team-member {
+      @include col();
+      @include size(3);
+      @include size-md(6);
+      @include size-xs(12);
+      position: relative;
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        &:hover {
+          opacity: 1;
+        }
+        @include row-flex();
+        .social {
+          @include col();
+          @include size(4);
+          a{
+
+            width: 0;
+            height: 0;
+            border-top: 40px solid black;
+            border-right: 40px solid transparent;
+            color:#fff;
+            &:hover {
+              border-top: 40px solid $btn;
+            }
+            position: relative;
+            i {
+
+            }
+          }
+          position: absolute;
+          bottom:0;
+        }
+      }
+
+    }
+  }
+}
+
+#stats {
+  padding: 100px 0;
+  max-width: 100%;
+  background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
+  background-size: cover;
+  .diagrams {
+    @include row-flex();
+
+    .diagram {
+      @include col();
+      @include size(3);
+      @include size-md(6);
+      @include size-xs(12);
+
+      div {
+        color:#fff;
+        text-align: center;
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .circle{
+        left:33.33%;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border: 1px solid $btn;
+        border-radius: 50%;
+        position: relative;
+        .sector1 {
+          width: 50%;
+          height: 50%;
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform-origin: left bottom;
+          background: $btn;
+        }
+        .sector2 {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left:50%;
+          top: 0;
+          background: $btn;
+        }
+        .sector3 {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top:50%;
+          background: $btn;
+
+        }
+        .sector4 {
+          width: 50%;
+          height: 50%;
+          position: absolute;
+          left:-25%;
+          top:0;
+          transform: skew(45deg);
+          background: $btn;
+        }
+        .center {
+          width: 10px;
+          height: 10px;
+          left:45%;
+          top:45%;
+          border: 2px solid $btn;
+          box-sizing: border-box;
+          background: #fff;
+          border-radius: 50%;
+          position: absolute;
+        }
+      }
+    }
+  }
+}

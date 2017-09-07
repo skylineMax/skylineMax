@@ -1,0 +1,18 @@
+$margin: 15px;
+$btn: darkorange;
+
+@mixin background($imgpath,$position:0 0,$size: cover,$repeat: no-repeat) {
+  background: {
+    image: url($imgpath);
+    position: $position;
+    size: $size;
+    repeat: $repeat;
+  }
+}
+
+@mixin font ($size,$bold) {
+  font: {
+    size: $size;
+    weight: $bold;
+  }
+}
