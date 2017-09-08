@@ -1,5 +1,5 @@
 {
-  "name": "landing2",
+  "name": "skylinemax.github.io",
   "description": "",
   "main": "",
   "authors": [
@@ -13,5 +13,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "1.9.1 - 3"
+  }
 }
