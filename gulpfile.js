@@ -15,31 +15,31 @@ var gulp = require('gulp'),
 var smartgridSettings = {
     outputStyle: 'scss', /* less || scss || sass || styl */
     columns: 12, /* number of grid columns */
-    offset: '0px', /* gutter width px || % */
+    offset: '30px', /* gutter width px || % */
     container: {
         maxWidth: '1200px', /* max-width оn very large screen */
-        fields: '0px' /* side fields */
+        fields: '30px' /* side fields */
     },
     breakPoints: {
         lg: {
             width: '1100px', /* -> @media (max-width: 1100px) */
-            fields: '0px' /* side fields */
+            fields: '30px' /* side fields */
         },
         md: {
             width: '960px',
-            fields: '0px'
+            fields: '30px'
         },
         sm: {
             width: '780px',
-            fields: '0px'
+            fields: '30px'
         },
         xs: {
             width: '560px',
-            fields: '0'
+            fields: '30px'
         },
         xxs: {
             width: '320px',
-            fields: '0'
+            fields: '30px'
         }
 
     }

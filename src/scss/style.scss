@@ -21,12 +21,14 @@
   }
 }
 html {
+  overflow: auto;
+  overflow-x: hidden;
+
 }
 body {
   width: 100%;
   font-weight:bold;
-  overflow: auto;
-  overflow-x: hidden;
+
 }
 header {
   background-image: url('../img/header_bg.jpg');
@@ -35,7 +37,7 @@ header {
   max-width: 100%;
   @include row-flex();
   @include justify-content-xs(center);
-  margin-right: 0;
+
 
   .logo1 {
     @include col();
@@ -201,6 +203,7 @@ header {
     max-width: 100%;
     background-image: linear-gradient(0, black 10%, transparent 100%), url('../img/hire_bg.png');
     background-size: cover;
+    @include row-flex();
     h1 {
       @include font(20px,bold);
       text-align: center;
@@ -235,7 +238,7 @@ header {
         &:nth-child(4),
         &:nth-child(5),
         &:nth-child(6) {
-          padding-bottom: 0;
+
         }
       }
     }
@@ -400,8 +403,7 @@ header {
     .items {
       @include row-flex();
       @include justify-content(center);
-      @include offset-sm(1);
-      @include offset-md(1);
+
 
       margin-top: 60px;
       .item {
@@ -430,7 +432,7 @@ header {
     .item {
       @include col();
       @include size(3);
-      @include size-md(6);
+      @include size-md(12);
       @include size-xs(12);
 
       border: 1px solid #fff;
@@ -480,8 +482,6 @@ header {
   .items {
     @include row-flex();
     @include justify-content(center);
-    @include offset-sm(1);
-    @include offset-md(1);
 
     margin-top: 60px;
     .item {
@@ -489,7 +489,7 @@ header {
       @include size(4);
       @include size-lg(4);
       @include size-md(6);
-      @include size-sm(6);
+      @include size-sm(12);
       @include size-xs(12);
 
       padding:0 30px 30px 30px;

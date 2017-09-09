@@ -116,8 +116,8 @@ img {
 
 .wrapper {
   max-width: 1200px;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -129,11 +129,14 @@ img {
   letter-spacing: 2px;
 }
 
+html {
+  overflow: auto;
+  overflow-x: hidden;
+}
+
 body {
   width: 100%;
   font-weight: bold;
-  overflow: auto;
-  overflow-x: hidden;
 }
 
 header {
@@ -146,18 +149,17 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-right: 0;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 header .logo1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(16.66667% - 0px);
+  width: calc(16.66667% - 30px);
   float: left;
   padding-top: 50px;
 }
@@ -165,10 +167,10 @@ header .logo1 {
 header .menu {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(100% - 0px);
+  width: calc(100% - 30px);
 }
 
 .overlay {
@@ -205,8 +207,8 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
   margin-top: 240px;
 }
 
@@ -216,9 +218,9 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: calc(100% - 0px);
+  margin-left: -15px;
+  margin-right: -15px;
+  width: calc(100% - 30px);
   color: darkorange;
   font-weight: bold;
 }
@@ -226,10 +228,10 @@ header .menu {
 .hello div h3 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(16.66667% - 0px);
+  width: calc(16.66667% - 30px);
   font-size: 26px;
   font-weight: bold;
 }
@@ -237,10 +239,10 @@ header .menu {
 .hello div a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(16.66667% - 0px);
+  width: calc(16.66667% - 30px);
   margin-top: -10px;
   margin-left: -50px;
 }
@@ -248,10 +250,10 @@ header .menu {
 .hello h1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(100% - 0px);
+  width: calc(100% - 30px);
   margin-top: 22px;
   color: #fff;
   font-size: 36px;
@@ -303,17 +305,17 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 #about_me h1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(100% - 0px);
+  width: calc(100% - 30px);
   text-align: center;
   margin-top: 100px;
   font-size: 30px;
@@ -323,10 +325,10 @@ header .menu {
 #about_me p {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(100% - 0px);
+  width: calc(100% - 30px);
   text-align: center;
   margin-top: 30px;
   font-size: 10px;
@@ -339,17 +341,17 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 #about_me .about-info .img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(41.66667% - 0px);
+  width: calc(41.66667% - 30px);
 }
 
 #about_me .about-info .img img {
@@ -359,10 +361,10 @@ header .menu {
 #about_me .about-info .info {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(58.33333% - 0px);
+  width: calc(58.33333% - 30px);
 }
 
 #about_me .about-info .info h1 {
@@ -402,6 +404,13 @@ header .menu {
   background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(10%, black), to(transparent)), url("../img/hire_bg.png");
   background-image: linear-gradient(0, black 10%, transparent 100%), url("../img/hire_bg.png");
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 #hire h1 {
@@ -438,8 +447,8 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -449,16 +458,10 @@ header .menu {
 #services .items .item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(33.33333% - 0px);
-}
-
-#services .items .item:nth-child(4),
-#services .items .item:nth-child(5),
-#services .items .item:nth-child(6) {
-  padding-bottom: 0;
+  width: calc(33.33333% - 30px);
 }
 
 #contact-me {
@@ -467,8 +470,8 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
   height: 300px;
   max-width: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(10%, black), to(transparent)), url(../img/hire_bg.png);
@@ -510,18 +513,18 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
   margin-top: 60px;
 }
 
 #team .team-members .team-member {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(25% - 0px);
+  width: calc(25% - 30px);
   position: relative;
 }
 
@@ -575,17 +578,17 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 #stats .diagrams .diagram {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(25% - 0px);
+  width: calc(25% - 30px);
 }
 
 #stats .diagrams .diagram div {
@@ -670,8 +673,8 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -681,10 +684,10 @@ header .menu {
 #portfolio .items .item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(33.33333% - 0px);
+  width: calc(33.33333% - 30px);
   padding: 0 30px 30px 30px;
 }
 
@@ -703,8 +706,8 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -713,10 +716,10 @@ header .menu {
 #members .items .item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(25% - 0px);
+  width: calc(25% - 30px);
   border: 1px solid #fff;
   padding: 15px;
   margin: 0 30px 30px 30px;
@@ -728,8 +731,8 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
   position: relative;
 }
 
@@ -750,10 +753,10 @@ header .menu {
 #members .items .item .inf .name {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(100% - 0px);
+  width: calc(100% - 30px);
   position: absolute;
   left: 40%;
   top: 25%;
@@ -762,10 +765,10 @@ header .menu {
 #members .items .item .inf .pos {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(100% - 0px);
+  width: calc(100% - 30px);
   position: absolute;
   color: darkorange;
   left: 40%;
@@ -788,8 +791,8 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -799,10 +802,10 @@ header .menu {
 #latest_news .items .item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(33.33333% - 0px);
+  width: calc(33.33333% - 30px);
   padding: 0 30px 30px 30px;
 }
 
@@ -872,18 +875,18 @@ header .menu {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
   position: relative;
 }
 
 #contact_me form input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(41.66667% - 0px);
+  width: calc(41.66667% - 30px);
   border: 1px solid #fff;
   padding: 10px;
   background: transparent;
@@ -909,10 +912,10 @@ header .menu {
 #contact_me form textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
   word-wrap: break-word;
-  width: calc(41.66667% - 0px);
+  width: calc(41.66667% - 30px);
   padding: 10px;
   background: transparent;
   position: absolute;
@@ -953,8 +956,8 @@ footer .smedia .fa {
 
 @media screen and (max-width: 1100px) {
   .wrapper {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .wrapper {
@@ -964,18 +967,18 @@ footer .smedia .fa {
   }
 
   #portfolio .items .item {
-    width: calc(33.33333% - 0px);
+    width: calc(33.33333% - 30px);
   }
 
   #latest_news .items .item {
-    width: calc(33.33333% - 0px);
+    width: calc(33.33333% - 30px);
   }
 }
 
 @media screen and (max-width: 960px) {
   .wrapper {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .wrapper {
@@ -985,52 +988,42 @@ footer .smedia .fa {
   }
 
   #about_me .about-info .img {
-    width: calc(100% - 0px);
+    width: calc(100% - 30px);
   }
 
   #about_me .about-info .info {
-    width: calc(100% - 0px);
+    width: calc(100% - 30px);
   }
 
   #services .items .item {
-    width: calc(50% - 0px);
+    width: calc(50% - 30px);
   }
 
   #team .team-members .team-member {
-    width: calc(100% - 0px);
+    width: calc(100% - 30px);
   }
 
   #stats .diagrams .diagram {
-    width: calc(50% - 0px);
-  }
-
-  #portfolio .items {
-    margin-left: calc(8.33333% + 0px);
-    margin-right: calc(8.33333% + 0px);
+    width: calc(50% - 30px);
   }
 
   #portfolio .items .item {
-    width: calc(50% - 0px);
+    width: calc(50% - 30px);
   }
 
   #members .items .item {
-    width: calc(50% - 0px);
-  }
-
-  #latest_news .items {
-    margin-left: calc(8.33333% + 0px);
-    margin-right: calc(8.33333% + 0px);
+    width: calc(100% - 30px);
   }
 
   #latest_news .items .item {
-    width: calc(50% - 0px);
+    width: calc(50% - 30px);
   }
 }
 
 @media screen and (max-width: 780px) {
   .wrapper {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .wrapper {
@@ -1039,29 +1032,19 @@ footer .smedia .fa {
             justify-content: center;
   }
 
-  #portfolio .items {
-    margin-left: calc(8.33333% + 0px);
-    margin-right: calc(8.33333% + 0px);
-  }
-
   #portfolio .items .item {
-    width: calc(50% - 0px);
-  }
-
-  #latest_news .items {
-    margin-left: calc(8.33333% + 0px);
-    margin-right: calc(8.33333% + 0px);
+    width: calc(50% - 30px);
   }
 
   #latest_news .items .item {
-    width: calc(50% - 0px);
+    width: calc(100% - 30px);
   }
 }
 
 @media screen and (max-width: 560px) {
   .wrapper {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .wrapper {
@@ -1077,33 +1060,33 @@ footer .smedia .fa {
   }
 
   #services .items .item {
-    width: calc(100% - 0px);
+    width: calc(100% - 30px);
   }
 
   #stats .diagrams .diagram {
-    width: calc(100% - 0px);
+    width: calc(100% - 30px);
   }
 
   #portfolio .items .item {
-    width: calc(100% - 0px);
+    width: calc(100% - 30px);
   }
 
   #members .items .item {
-    width: calc(100% - 0px);
+    width: calc(100% - 30px);
   }
 
   #latest_news .items .item {
-    width: calc(100% - 0px);
+    width: calc(100% - 30px);
   }
 }
 
 @media screen and (max-width: 320px) {
   .wrapper {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   #services .items .item {
-    width: calc(100% - 0px);
+    width: calc(100% - 30px);
   }
 }
