@@ -21,12 +21,12 @@
   }
 }
 html {
-  overflow: auto;
-  overflow-x: hidden;
 }
 body {
   width: 100%;
   font-weight:bold;
+  overflow: auto;
+  overflow-x: hidden;
 }
 header {
   background-image: url('../img/header_bg.jpg');
@@ -73,7 +73,6 @@ header {
 }
 .hello {
   @include row-flex();
-  margin-left: 0;
   margin-top:240px;
   div {
     @include row-flex();
@@ -138,7 +137,6 @@ header {
 }
 #about_me {
     @include row-flex();
-    margin-left: 0;
     h1 {
       @include col();
       @include size(12);
@@ -201,7 +199,7 @@ header {
 #hire {
     height: 300px;
     max-width: 100%;
-    background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
+    background-image: linear-gradient(0, black 10%, transparent 100%), url('../img/hire_bg.png');
     background-size: cover;
     h1 {
       @include font(20px,bold);
