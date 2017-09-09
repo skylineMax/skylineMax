@@ -8,6 +8,11 @@
 }
 .wrapper {
   @include wrapper();
+  @include justify-content(center);
+  @include justify-content-lg(center);
+  @include justify-content-md(center);
+  @include justify-content-sm(center);
+  @include justify-content-xs(center);
   font-family: 'Gothic Boo', sans-serif;
   .info {
     h1 {
@@ -15,15 +20,21 @@
     }
   }
 }
+html {
+  overflow: auto;
+  overflow-x: hidden;
+}
 body {
   width: 100%;
   font-weight:bold;
 }
 header {
-  @include background('../img/header_bg.jpg');
+  background-image: url('../img/header_bg.jpg');
+  background-size: cover;
   height: 900px;
   max-width: 100%;
   @include row-flex();
+  @include justify-content-xs(center);
   margin-right: 0;
 
   .logo1 {
@@ -221,6 +232,8 @@ header {
         @include col-4();
         @include col-md-6();
         @include size-xs(12);
+        @include size-xxs(12);
+
         &:nth-child(4),
         &:nth-child(5),
         &:nth-child(6) {
@@ -305,9 +318,10 @@ header {
 
 #stats {
   padding: 100px 0;
-  max-width: 100%;
+  max-width:100%;
   background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
   background-size: cover;
+  margin-right: -15px;
   .diagrams {
     @include row-flex();
     .diagram {
@@ -315,6 +329,7 @@ header {
       @include size(3);
       @include size-md(6);
       @include size-xs(12);
+
 
       div {
         color:#fff;

@@ -36,6 +36,10 @@ var smartgridSettings = {
         xs: {
             width: '560px',
             fields: '0'
+        },
+        xxs: {
+            width: '320px',
+            fields: '0'
         }
 
     }
@@ -43,7 +47,7 @@ var smartgridSettings = {
 
 gulp.task('connect', function () {
     connect.server({
-        root: 'build',
+        root: '',
         livereload: true
     });
 });
@@ -56,28 +60,28 @@ gulp.task('css', function () {
         .pipe(sass())
         .pipe(gcmq())
         .pipe(prefix('last 2 versions', '> 1%', 'ie 9'))
-        .pipe(gulp.dest('build/css'))
+        .pipe(gulp.dest('css'))
         .pipe(cleanCSS(''))
         .pipe(rename('bundle.min.css'))
-        .pipe(gulp.dest('build/css'))
+        .pipe(gulp.dest('css'))
         .pipe(connect.reload());
 });
 
 gulp.task('uncss', function () {
-    return gulp.src('build/css/bundle.min.css')
+    return gulp.src('css/bundle.min.css')
         .pipe(uncss({
-            html: ['build/index.html']
+            html: ['index.html']
         }))
-        .pipe(gulp.dest('build/css'));
+        .pipe(gulp.dest('css'));
 });
 
 gulp.task('html', function () {
-    gulp.src('build/index.html')
+    gulp.src('index.html')
         .pipe(connect.reload());
 });
 gulp.task('watch', function () {
-    gulp.watch('build/css/*.css',['css']);
-    gulp.watch('build/index.html',['html']);
+    gulp.watch('css/*.css',['css']);
+    gulp.watch('index.html',['html']);
     gulp.watch('src/scss/*.scss',['css']);
 });
 
