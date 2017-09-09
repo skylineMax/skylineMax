@@ -116,10 +116,10 @@ img {
 
 .wrapper {
   max-width: 1200px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
   margin: 0 auto;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Gothic Boo', sans-serif;
 }
 
 .wrapper .info h1 {
@@ -145,6 +145,7 @@ header {
       flex-wrap: wrap;
   margin-left: 0px;
   margin-right: 0px;
+  margin-right: 0;
 }
 
 header .logo1 {
@@ -203,6 +204,7 @@ header .menu {
       flex-wrap: wrap;
   margin-left: 0px;
   margin-right: 0px;
+  margin-left: 0;
   margin-top: 240px;
 }
 
@@ -289,6 +291,10 @@ header .menu {
   border: 1px solid darkorange;
 }
 
+.fa {
+  color: darkorange;
+}
+
 #about_me {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -297,6 +303,7 @@ header .menu {
       flex-wrap: wrap;
   margin-left: 0px;
   margin-right: 0px;
+  margin-left: 0;
 }
 
 #about_me h1 {
@@ -389,13 +396,6 @@ header .menu {
 }
 
 #hire {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
   height: 300px;
   max-width: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(10%, black), to(transparent)), url(../img/hire_bg.png);
@@ -452,8 +452,6 @@ header .menu {
   margin-right: 0px;
   word-wrap: break-word;
   width: calc(33.33333% - 0px);
-  padding-right: 30px;
-  padding-bottom: 15px;
 }
 
 #services .items .item:nth-child(4),
@@ -513,9 +511,6 @@ header .menu {
       flex-wrap: wrap;
   margin-left: 0px;
   margin-right: 0px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: 60px;
 }
 
@@ -540,13 +535,6 @@ header .menu {
   opacity: 0;
   -webkit-transition: .5s ease;
   transition: .5s ease;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
 }
 
 #team .team-members .team-member .overlay:hover {
@@ -554,12 +542,6 @@ header .menu {
 }
 
 #team .team-members .team-member .overlay .social {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: 0px;
-  margin-right: 0px;
-  word-wrap: break-word;
-  width: calc(33.33333% - 0px);
   position: absolute;
   bottom: 0;
 }
@@ -676,17 +658,316 @@ header .menu {
   position: absolute;
 }
 
+#portfolio {
+  padding: 100px 0;
+}
+
+#portfolio .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 60px;
+}
+
+#portfolio .items .item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 0px;
+  margin-right: 0px;
+  word-wrap: break-word;
+  width: calc(33.33333% - 0px);
+  padding: 0 30px 30px 30px;
+}
+
+#members {
+  padding: 100px 0;
+  max-width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(10%, black), to(transparent)), url(../img/hire_bg.png);
+  background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
+  background-size: cover;
+  color: #fff;
+}
+
+#members .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#members .items .item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 0px;
+  margin-right: 0px;
+  word-wrap: break-word;
+  width: calc(25% - 0px);
+  border: 1px solid #fff;
+  padding: 15px;
+  margin: 0 30px 30px 30px;
+}
+
+#members .items .item .inf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  position: relative;
+}
+
+#members .items .item .inf span {
+  width: 80px;
+  height: 80px;
+  border: 1px solid;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#members .items .item .inf span img {
+  height: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+#members .items .item .inf .name {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 0px;
+  margin-right: 0px;
+  word-wrap: break-word;
+  width: calc(100% - 0px);
+  position: absolute;
+  left: 40%;
+  top: 25%;
+}
+
+#members .items .item .inf .pos {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 0px;
+  margin-right: 0px;
+  word-wrap: break-word;
+  width: calc(100% - 0px);
+  position: absolute;
+  color: darkorange;
+  left: 40%;
+  top: 55%;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#members .items .item p {
+  color: #fff;
+}
+
+#latest_news {
+  padding: 100px 0;
+}
+
+#latest_news .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 60px;
+}
+
+#latest_news .items .item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 0px;
+  margin-right: 0px;
+  word-wrap: break-word;
+  width: calc(33.33333% - 0px);
+  padding: 0 30px 30px 30px;
+}
+
+#latest_news .items .item .bg {
+  background-color: #f5f5f5;
+}
+
+#latest_news .items .item .bg:hover {
+  background: #FFF;
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+#latest_news .items .item .bg:hover .btn:hover {
+  background-color: darkorange;
+  border: 1px solid darkorange;
+  color: #fff;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#latest_news .items .item .bg .pg {
+  padding: 20px;
+}
+
+#latest_news .items .item .bg .pg .meet {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#latest_news .items .item .bg .pg hr {
+  border: none;
+  color: #f5f5f5;
+  background-color: #f2f2f2;
+  height: 3px;
+  margin: 25px 0;
+}
+
+#latest_news .items .item .bg .pg p {
+  margin-bottom: 25px;
+}
+
+#latest_news .items .item .bg .pg .btn {
+  color: darkorange;
+  background-color: #fff;
+  border: 1px solid darkorange;
+}
+
+#contact_me {
+  padding: 100px 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(10%, black), to(transparent)), url(../img/hire_bg.png);
+  background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
+  background-size: cover;
+}
+
+#contact_me .title {
+  color: #fff;
+}
+
+#contact_me form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  position: relative;
+}
+
+#contact_me form input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 0px;
+  margin-right: 0px;
+  word-wrap: break-word;
+  width: calc(41.66667% - 0px);
+  border: 1px solid #fff;
+  padding: 10px;
+  background: transparent;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+#contact_me form input .name {
+  position: absolute;
+}
+
+#contact_me form input .email {
+  position: absolute;
+  top: 33.33%;
+}
+
+#contact_me form input .subject {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#contact_me form textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 0px;
+  margin-right: 0px;
+  word-wrap: break-word;
+  width: calc(41.66667% - 0px);
+  padding: 10px;
+  background: transparent;
+  position: absolute;
+  right: 0;
+}
+
+#contact_me form .submit {
+  background-color: darkorange;
+  border: 1px solid darkorange;
+  color: #fff;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+footer {
+  color: #fff;
+  background-color: darkslategray;
+  padding: 40px 0;
+}
+
+footer .smedia {
+  float: right;
+}
+
+footer .smedia i:hover {
+  width: 20px;
+  height: 20px;
+  background-color: darkorange;
+}
+
+footer .smedia .fa {
+  color: #fff;
+}
+
 @media screen and (max-width: 1100px) {
   .wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #portfolio .items .item {
+    width: calc(33.33333% - 0px);
+  }
+
+  #latest_news .items .item {
+    width: calc(33.33333% - 0px);
   }
 }
 
 @media screen and (max-width: 960px) {
   .wrapper {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   #about_me .about-info .img {
@@ -702,18 +983,58 @@ header .menu {
   }
 
   #team .team-members .team-member {
-    width: calc(50% - 0px);
+    width: calc(100% - 0px);
   }
 
   #stats .diagrams .diagram {
+    width: calc(50% - 0px);
+  }
+
+  #portfolio .items {
+    margin-left: calc(8.33333% + 0px);
+    margin-right: calc(8.33333% + 0px);
+  }
+
+  #portfolio .items .item {
+    width: calc(50% - 0px);
+  }
+
+  #members .items .item {
+    width: calc(50% - 0px);
+  }
+
+  #latest_news .items {
+    margin-left: calc(8.33333% + 0px);
+    margin-right: calc(8.33333% + 0px);
+  }
+
+  #latest_news .items .item {
     width: calc(50% - 0px);
   }
 }
 
 @media screen and (max-width: 780px) {
   .wrapper {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #portfolio .items {
+    margin-left: calc(8.33333% + 0px);
+    margin-right: calc(8.33333% + 0px);
+  }
+
+  #portfolio .items .item {
+    width: calc(50% - 0px);
+  }
+
+  #latest_news .items {
+    margin-left: calc(8.33333% + 0px);
+    margin-right: calc(8.33333% + 0px);
+  }
+
+  #latest_news .items .item {
+    width: calc(50% - 0px);
   }
 }
 
@@ -727,11 +1048,19 @@ header .menu {
     width: calc(100% - 0px);
   }
 
-  #team .team-members .team-member {
+  #stats .diagrams .diagram {
     width: calc(100% - 0px);
   }
 
-  #stats .diagrams .diagram {
+  #portfolio .items .item {
+    width: calc(100% - 0px);
+  }
+
+  #members .items .item {
+    width: calc(100% - 0px);
+  }
+
+  #latest_news .items .item {
     width: calc(100% - 0px);
   }
 }

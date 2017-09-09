@@ -1,18 +1,16 @@
 'use strict';
 
 var gulp = require('gulp'),
-    concatCSS = require('gulp-concat-css'),
     rename = require('gulp-rename'),
-    notify = require('gulp-notify'),
     prefix = require('gulp-autoprefixer'),
     livereload = require('gulp-livereload'),
     connect = require('gulp-connect'),
     sass = require('gulp-sass'),
-    uglify = require('gulp-uglify'),
     uncss = require('gulp-uncss'),
     cleanCSS = require('gulp-clean-css'),
     gcmq = require('gulp-group-css-media-queries'),
     smartgrid = require('smart-grid');
+
 
 var smartgridSettings = {
     outputStyle: 'scss', /* less || scss || sass || styl */
@@ -20,20 +18,20 @@ var smartgridSettings = {
     offset: '0px', /* gutter width px || % */
     container: {
         maxWidth: '1200px', /* max-width оn very large screen */
-        fields: '30px' /* side fields */
+        fields: '0px' /* side fields */
     },
     breakPoints: {
         lg: {
             width: '1100px', /* -> @media (max-width: 1100px) */
-            fields: '30px' /* side fields */
+            fields: '0px' /* side fields */
         },
         md: {
             width: '960px',
-            fields: '15px'
+            fields: '0px'
         },
         sm: {
             width: '780px',
-            fields: '15px'
+            fields: '0px'
         },
         xs: {
             width: '560px',
@@ -49,6 +47,7 @@ gulp.task('connect', function () {
         livereload: true
     });
 });
+
 gulp.task('smartgrid', function () {
     smartgrid('src/scss', smartgridSettings)
 });
@@ -82,4 +81,4 @@ gulp.task('watch', function () {
     gulp.watch('src/scss/*.scss',['css']);
 });
 
-gulp.task('default', ['connect','css','uncss','html','watch','smartgrid']);
+gulp.task('default', ['connect','css','uncss','html','watch', 'smartgrid']);

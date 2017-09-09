@@ -59,23 +59,23 @@ $break_xs: 560px;
 
 @mixin wrapper(){
     max-width: 1200px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
     margin: 0 auto;
 
     @media screen and (max-width: $break_lg){
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     @media screen and (max-width: $break_md){
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     @media screen and (max-width: $break_sm){
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     @media screen and (max-width: $break_xs){
