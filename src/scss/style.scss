@@ -27,16 +27,19 @@ html {
 }
 body {
   width: 100%;
-  font-weight:bold;
+
   @include font(15px,bold);
 }
 header {
+  @include row-flex();
+  @include justify-content-xs(center);
+  margin-left: 0;
   background-image: url('../img/header_bg.jpg');
   background-size: cover;
   height: 900px;
   max-width: 100%;
-  @include row-flex();
-  @include justify-content-xs(center);
+
+
 
 
   .logo1 {
@@ -138,7 +141,9 @@ header {
   color: $btn;
 }
 #about_me {
-    @include row-flex();
+  @include row-flex();
+  max-width: 100%;
+  margin-left: 0;
     h1 {
       @include col();
       @include size(12);
@@ -199,11 +204,13 @@ header {
   }
 
 #hire {
+    @include row-flex();
+    margin-left: 0;
     height: 300px;
     max-width: 100%;
     background-image: linear-gradient(0, black 10%, transparent 100%), url('../img/hire_bg.png');
     background-size: cover;
-    @include row-flex();
+
     h1 {
       @include font(20px,bold);
       text-align: center;
@@ -246,6 +253,7 @@ header {
 
 #contact-me {
   @include row-flex();
+  margin-left: 0;
   height: 300px;
   max-width: 100%;
   background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
@@ -322,7 +330,6 @@ header {
   max-width:100%;
   background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
   background-size: cover;
-  margin-right: -15px;
   .diagrams {
     @include row-flex();
     .diagram {
@@ -404,7 +411,6 @@ header {
       @include row-flex();
       @include justify-content(center);
 
-
       margin-top: 60px;
       .item {
         @include col();
@@ -443,11 +449,15 @@ header {
         @include row-flex();
         position: relative;
         span {
+          @include col();
+          margin-bottom:20px;
           width: 80px;
           height: 80px;
           border:1px solid;
           border-radius: 50%;
           overflow: hidden;
+
+
            img {
              height: 100%;
              align-self: center;
@@ -605,15 +615,46 @@ footer {
   color: #fff;
   background-color: darkslategray;
   padding:40px 0;
-  span {
-  }
+
 
   .smedia {
     float:right;
-    i:hover {
-      width: 20px;
-      height:20px;
-      background-color: $btn;
+    @include row-float();
+    .hov {
+      @include col();
+      @include size(2);
+      margin: 0;
+      float: left;
+      width: 30px;
+      height: 30px;
+      display: block;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      position: relative;
+      &:hover {
+        background-color: $btn;
+      }
+
+      .fa {
+        position: absolute;
+        left: 33.33%;
+        top: 33.33%;
+      }
+      .fa-twitter {
+        position: absolute;
+        left: 25%;
+        top: 25%;
+      }
+      .fa-linkedin {
+        position: absolute;
+        left: 27%;
+        top: 25%;
+      }
+      .fa-google-plus {
+        position: absolute;
+        left: 18%;
+        top: 25%;
+      }
     }
     .fa {
       color: #fff;

@@ -136,16 +136,11 @@ html {
 
 body {
   width: 100%;
-  font-weight: bold;
   font-size: 15px;
   font-weight: bold;
 }
 
 header {
-  background-image: url("../img/header_bg.jpg");
-  background-size: cover;
-  height: 900px;
-  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,6 +148,11 @@ header {
       flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
+  margin-left: 0;
+  background-image: url("../img/header_bg.jpg");
+  background-size: cover;
+  height: 900px;
+  max-width: 100%;
 }
 
 header .logo1 {
@@ -309,6 +309,8 @@ header .menu {
       flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
+  max-width: 100%;
+  margin-left: 0;
 }
 
 #about_me h1 {
@@ -401,11 +403,6 @@ header .menu {
 }
 
 #hire {
-  height: 300px;
-  max-width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(10%, black), to(transparent)), url("../img/hire_bg.png");
-  background-image: linear-gradient(0, black 10%, transparent 100%), url("../img/hire_bg.png");
-  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -413,6 +410,12 @@ header .menu {
       flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
+  margin-left: 0;
+  height: 300px;
+  max-width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(10%, black), to(transparent)), url("../img/hire_bg.png");
+  background-image: linear-gradient(0, black 10%, transparent 100%), url("../img/hire_bg.png");
+  background-size: cover;
 }
 
 #hire h1 {
@@ -474,6 +477,7 @@ header .menu {
       flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
+  margin-left: 0;
   height: 300px;
   max-width: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(10%, black), to(transparent)), url(../img/hire_bg.png);
@@ -571,7 +575,6 @@ header .menu {
   background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(10%, black), to(transparent)), url(../img/hire_bg.png);
   background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
   background-size: cover;
-  margin-right: -15px;
 }
 
 #stats .diagrams {
@@ -739,6 +742,12 @@ header .menu {
 }
 
 #members .items .item .inf span {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  margin-bottom: 20px;
   width: 80px;
   height: 80px;
   border: 1px solid;
@@ -944,12 +953,59 @@ footer {
 
 footer .smedia {
   float: right;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-footer .smedia i:hover {
-  width: 20px;
-  height: 20px;
+footer .smedia::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+footer .smedia .hov {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(16.66667% - 30px);
+  margin: 0;
+  float: left;
+  width: 30px;
+  height: 30px;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: relative;
+}
+
+footer .smedia .hov:hover {
   background-color: darkorange;
+}
+
+footer .smedia .hov .fa {
+  position: absolute;
+  left: 33.33%;
+  top: 33.33%;
+}
+
+footer .smedia .hov .fa-twitter {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+footer .smedia .hov .fa-linkedin {
+  position: absolute;
+  left: 27%;
+  top: 25%;
+}
+
+footer .smedia .hov .fa-google-plus {
+  position: absolute;
+  left: 18%;
+  top: 25%;
 }
 
 footer .smedia .fa {
