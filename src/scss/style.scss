@@ -269,6 +269,8 @@ header {
              bottom:5%;
              left: 5%;
              @include font(12px,normal);
+             color: $btn;
+
            }
         }
         img {
