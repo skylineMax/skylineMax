@@ -103,7 +103,7 @@ header {
 .title {
    h1 {
      text-align: center;
-     @include font(3.6vw,bold);
+     @include font(36px,bold);
    }
    p {
      margin-top: 30px;
@@ -234,19 +234,41 @@ header {
           bottom: 0;
           color: #fff;
           background-color: rgba(0,0,0,0.5);
+          .crcl{
+            @include row-flex();
+            align-items: center;
+            justify-content: center;
+            left:85%;
+            bottom:0;
+            width: 35px;
+            height: 35px;
+            border: 1px solid $btn;
+            border-radius: 50%;
+            color: $btn;
+
+            &:hover {
+              background:$btn;
+              color: #fff;
+              .fa {
+                color: #fff;
+                transform: rotate(90deg);
+                transition: all 300ms;
+              }
+            }
+          }
+
           span {
+            display: block;
             position: absolute;
             bottom:10%;
             left: 5%;
-            display: block;
             margin-bottom:10px;
           }
            P {
              position: absolute;
-             bottom:0;
+             bottom:5%;
              left: 5%;
-
-             @include font(1.5vw,normal);
+             @include font(12px,normal);
            }
         }
         img {
