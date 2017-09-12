@@ -13,7 +13,7 @@
   @include justify-content-md(center);
   @include justify-content-sm(center);
   @include justify-content-xs(center);
-  font-family: 'Gothic Boo', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   .info {
     h1 {
       letter-spacing: 2px;
@@ -108,7 +108,7 @@ header {
    p {
      margin-top: 30px;
      text-align: center;
-     @include font(10px,normal);
+     @include font(14px,normal);
    }
  }
 .btn {
@@ -131,9 +131,12 @@ header {
 .fa {
   color: $btn;
 }
+img {
+  display: block;
+}
 
 #about_me {
-  padding-top: 100px;
+  margin:100px 0 70px 0;
 
     .about-info {
       @include row-flex();
@@ -148,7 +151,7 @@ header {
         img {
           @include offset-left-sm(2);
           @include offset-left-xs(0);
-
+          display: block;
         }
       }
       .info {
@@ -209,7 +212,7 @@ header {
   }
 
 #services {
-    padding:100px 0;
+    margin:100px 0 70px 0;
 
     .items {
       @include row-flex();
@@ -269,8 +272,6 @@ header {
              bottom:5%;
              left: 5%;
              @include font(12px,normal);
-             color: $btn;
-
            }
         }
         img {
@@ -304,7 +305,7 @@ header {
 }
 
 #team {
-  padding: 100px 0;
+  margin:100px 0 70px 0;
   .team-members {
     @include row-flex();
     margin-top: 60px;
@@ -312,8 +313,49 @@ header {
     .team-member {
       @include col();
       @include size(3);
-      @include size-md(12);
+      @include size-lg(3);
+      @include size-md(6);
+      @include size-sm(6);
+      @include size-xs(12);
+
       position: relative;
+      margin-bottom:30px;
+      &:hover {
+        .name {
+
+          bottom: 75px;
+          transition: bottom 0.6s cubic-bezier(0, 0.5, 0.5, 1);
+        }
+        &:after {
+          .overlay {
+            opacity:1;
+          }
+        }
+      }
+      .name {
+        @include row-flex();
+        @include col();
+        @include size(12);
+        justify-content: center;
+        align-items: center;
+        h1 {
+          @include col();
+          @include size(12);
+          text-align: center;
+          @include font(16px,bold);
+          color: #fff;
+        }
+        span {
+          @include col();
+          @include size(12);
+          margin-top:15px;
+          text-align: center;
+          @include font(14px,normal);
+          color: $btn;
+        }
+        position: absolute;
+        bottom:5%;
+      }
       .overlay {
         position: absolute;
         top: 0;
@@ -323,31 +365,38 @@ header {
         height: 100%;
         width: 100%;
         opacity: 0;
-        transition: .5s ease;
-        &:hover {
-          opacity: 1;
+        background: rgba(0,0,0,0.3);
+        transition: ease;
+        &:hover{
+            opacity: 1;
         }
-
-        .social {
-
-          a{
-
-            width: 0;
-            height: 0;
-            border-top: 40px solid black;
-            border-right: 40px solid transparent;
-            color:#fff;
-            &:hover {
-              border-top: 40px solid $btn;
-            }
-            position: relative;
-            i {
-
-            }
+      }
+      .social {
+        @include row-flex();
+        @include col();
+        @include size(12);
+        align-items: center;
+        justify-content: center;
+        a{
+          border-top: 40px solid black;
+          border-right: 40px solid transparent;
+          &:hover {
+            border-top: 40px solid $btn;
           }
-          position: absolute;
-          bottom:0;
+          position: relative;
+          i {
+            position: absolute;
+            bottom:12px;
+            left: 13px;
+            color: #fff;
+          }
+          margin-right:7%;
+          &:last-child {
+            margin-right:0;
+          }
         }
+        position: absolute;
+        bottom:2%;
       }
 
     }
@@ -435,7 +484,7 @@ header {
 }
 
 #portfolio {
-  padding: 100px 0;
+  margin:100px 0 70px 0;
     .items {
       @include row-flex();
       @include justify-content(center);
@@ -449,14 +498,76 @@ header {
         @include size-sm(6);
         @include size-xs(12);
 
-        padding:0 30px 30px 30px;
+        position: relative;
+        margin-bottom:30px;
+        &:hover {
+          .type {
+            display: block;
+          }
+          .view {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .overlay {
+            opacity: 1;
+          }
+        }
+        .overlay {
+          position: absolute;
+          left: 5%;
+          top: 10%;
+          height: 80%;
+          width: 90%;
+          opacity: 0;
+          background: rgba(255,255,255,0.5);
+          transition: ease;
+        }
+        .type {
+          display: none;
+          position: absolute;
+          bottom:15%;
+          left:10%;
+          h1{
+            @include font(16px, bold);
+          }
+          p {
+            margin-top:5px;
+            @include font(12px, bold);
+            color:$btn;
+          }
+        }
+        .view{
+          display: none;
 
+          span {
+            position: absolute;
+            @include row-flex();
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: $btn;
+            border-radius: 50%;
+            margin: auto;
+            bottom: 42%;
+            &:hover {
+              background: #fff;
+              .fa {
+                color: $btn;
+              }
+            }
+            .fa {
+              color: #fff;
+            }
+          }
+        }
       }
     }
 }
 
 #members {
-  padding: 100px 0;
+  padding:100px 0 70px 0;
   max-width: 100%;
   background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
   background-size: cover;
@@ -517,7 +628,7 @@ header {
 }}}
 
 #latest_news {
-  padding: 100px 0;
+  margin:100px 0 70px 0;
   .items {
     @include row-flex();
     @include justify-content(center);

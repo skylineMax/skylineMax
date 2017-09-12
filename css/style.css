@@ -122,7 +122,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: 'Gothic Boo', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper .info h1 {
@@ -239,7 +239,7 @@ header .hello button {
 .title p {
   margin-top: 30px;
   text-align: center;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: normal;
 }
 
@@ -265,8 +265,12 @@ header .hello button {
   color: darkorange;
 }
 
+img {
+  display: block;
+}
+
 #about_me {
-  padding-top: 100px;
+  margin: 100px 0 70px 0;
 }
 
 #about_me .about-info {
@@ -291,6 +295,10 @@ header .hello button {
   word-wrap: break-word;
   width: calc(41.66667% - 30px);
   vertical-align: top;
+}
+
+#about_me .about-info .img img {
+  display: block;
 }
 
 #about_me .about-info .info {
@@ -374,7 +382,7 @@ header .hello button {
 }
 
 #services {
-  padding: 100px 0;
+  margin: 100px 0 70px 0;
 }
 
 #services .items {
@@ -463,7 +471,6 @@ header .hello button {
   left: 5%;
   font-size: 12px;
   font-weight: normal;
-  color: darkorange;
 }
 
 #services .items .item img {
@@ -511,7 +518,7 @@ header .hello button {
 }
 
 #team {
-  padding: 100px 0;
+  margin: 100px 0 70px 0;
 }
 
 #team .team-members {
@@ -533,6 +540,68 @@ header .hello button {
   word-wrap: break-word;
   width: calc(25% - 30px);
   position: relative;
+  margin-bottom: 30px;
+}
+
+#team .team-members .team-member:hover .name {
+  bottom: 75px;
+  -webkit-transition: bottom 0.6s cubic-bezier(0, 0.5, 0.5, 1);
+  transition: bottom 0.6s cubic-bezier(0, 0.5, 0.5, 1);
+}
+
+#team .team-members .team-member:hover:after .overlay {
+  opacity: 1;
+}
+
+#team .team-members .team-member .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(100% - 30px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 5%;
+}
+
+#team .team-members .team-member .name h1 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(100% - 30px);
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#team .team-members .team-member .name span {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(100% - 30px);
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: darkorange;
 }
 
 #team .team-members .team-member .overlay {
@@ -544,30 +613,59 @@ header .hello button {
   height: 100%;
   width: 100%;
   opacity: 0;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: ease;
+  transition: ease;
 }
 
 #team .team-members .team-member .overlay:hover {
   opacity: 1;
 }
 
-#team .team-members .team-member .overlay .social {
+#team .team-members .team-member .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(100% - 30px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
-  bottom: 0;
+  bottom: 2%;
 }
 
-#team .team-members .team-member .overlay .social a {
-  width: 0;
-  height: 0;
+#team .team-members .team-member .social a {
   border-top: 40px solid black;
   border-right: 40px solid transparent;
-  color: #fff;
   position: relative;
+  margin-right: 7%;
 }
 
-#team .team-members .team-member .overlay .social a:hover {
+#team .team-members .team-member .social a:hover {
   border-top: 40px solid darkorange;
+}
+
+#team .team-members .team-member .social a i {
+  position: absolute;
+  bottom: 12px;
+  left: 13px;
+  color: #fff;
+}
+
+#team .team-members .team-member .social a:last-child {
+  margin-right: 0;
 }
 
 #stats {
@@ -670,7 +768,7 @@ header .hello button {
 }
 
 #portfolio {
-  padding: 100px 0;
+  margin: 100px 0 70px 0;
 }
 
 #portfolio .items {
@@ -694,11 +792,102 @@ header .hello button {
   margin-right: 15px;
   word-wrap: break-word;
   width: calc(33.33333% - 30px);
-  padding: 0 30px 30px 30px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+#portfolio .items .item:hover .type {
+  display: block;
+}
+
+#portfolio .items .item:hover .view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#portfolio .items .item:hover .overlay {
+  opacity: 1;
+}
+
+#portfolio .items .item .overlay {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  height: 80%;
+  width: 90%;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-transition: ease;
+  transition: ease;
+}
+
+#portfolio .items .item .type {
+  display: none;
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+}
+
+#portfolio .items .item .type h1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#portfolio .items .item .type p {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: darkorange;
+}
+
+#portfolio .items .item .view {
+  display: none;
+}
+
+#portfolio .items .item .view span {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: darkorange;
+  border-radius: 50%;
+  margin: auto;
+  bottom: 42%;
+}
+
+#portfolio .items .item .view span:hover {
+  background: #fff;
+}
+
+#portfolio .items .item .view span:hover .fa {
+  color: darkorange;
+}
+
+#portfolio .items .item .view span .fa {
+  color: #fff;
 }
 
 #members {
-  padding: 100px 0;
+  padding: 100px 0 70px 0;
   max-width: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(10%, black), to(transparent)), url(../img/hire_bg.png);
   background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
@@ -794,7 +983,7 @@ header .hello button {
 }
 
 #latest_news {
-  padding: 100px 0;
+  margin: 100px 0 70px 0;
 }
 
 #latest_news .items {
@@ -1025,6 +1214,10 @@ footer .smedia .fa {
             justify-content: center;
   }
 
+  #team .team-members .team-member {
+    width: calc(25% - 30px);
+  }
+
   #portfolio .items .item {
     width: calc(33.33333% - 30px);
   }
@@ -1055,7 +1248,7 @@ footer .smedia .fa {
   }
 
   #team .team-members .team-member {
-    width: calc(100% - 30px);
+    width: calc(50% - 30px);
   }
 
   #stats .diagrams .diagram {
@@ -1099,6 +1292,10 @@ footer .smedia .fa {
     width: calc(100% - 30px);
   }
 
+  #team .team-members .team-member {
+    width: calc(50% - 30px);
+  }
+
   #portfolio .items .item {
     width: calc(50% - 30px);
   }
@@ -1131,6 +1328,10 @@ footer .smedia .fa {
   }
 
   #services .items .item {
+    width: calc(100% - 30px);
+  }
+
+  #team .team-members .team-member {
     width: calc(100% - 30px);
   }
 
