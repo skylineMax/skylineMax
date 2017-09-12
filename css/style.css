@@ -232,7 +232,7 @@ header .hello button {
 
 .title h1 {
   text-align: center;
-  font-size: 3.6vw;
+  font-size: 36px;
   font-weight: bold;
 }
 
@@ -413,19 +413,55 @@ header .hello button {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+#services .items .item .over .crcl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 85%;
+  bottom: 0;
+  width: 35px;
+  height: 35px;
+  border: 1px solid darkorange;
+  border-radius: 50%;
+  color: darkorange;
+}
+
+#services .items .item .over .crcl:hover {
+  background: darkorange;
+  color: #fff;
+}
+
+#services .items .item .over .crcl:hover .fa {
+  color: #fff;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
 #services .items .item .over span {
+  display: block;
   position: absolute;
   bottom: 10%;
   left: 5%;
-  display: block;
   margin-bottom: 10px;
 }
 
 #services .items .item .over P {
   position: absolute;
-  bottom: 0;
+  bottom: 5%;
   left: 5%;
-  font-size: 1.5vw;
+  font-size: 12px;
   font-weight: normal;
 }
 
