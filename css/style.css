@@ -155,120 +155,84 @@ header {
   max-width: 100%;
 }
 
-header .logo1 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: 15px;
-  margin-right: 15px;
-  word-wrap: break-word;
-  width: calc(16.66667% - 30px);
-  float: left;
-  padding-top: 50px;
-}
-
-header .menu {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: 15px;
-  margin-right: 15px;
-  word-wrap: break-word;
-  width: calc(100% - 30px);
-}
-
-.overlay {
+header .overlay {
   width: 100%;
   height: 900px;
   background-color: rgba(0, 0, 0, 0.36);
 }
 
-.menu {
-  padding-top: 66px;
-}
-
-.menu li {
+header .logo1 {
   float: left;
+  padding-top: 50px;
+}
+
+header .menu {
+  padding-top: 66px;
+  float: right;
+}
+
+header .menu ul {
+  display: block;
+}
+
+header .menu ul li {
+  margin: auto;
   padding-left: 30px;
+  float: left;
 }
 
-.menu li:first-child {
-  padding-left: 150px;
+header .menu ul li:first-child {
+  padding-left: 0;
 }
 
-.menu li a {
+header .menu ul li a {
   color: #fff;
   text-decoration: none;
 }
 
-.menu li a:hover {
+header .menu ul li a:hover {
   color: darkorange;
 }
 
-.hello {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-top: 240px;
-}
-
-.hello div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
-  width: calc(100% - 30px);
+header .hello {
+  position: absolute;
+  top: 50%;
   color: darkorange;
   font-weight: bold;
 }
 
-.hello div h3 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: 15px;
-  margin-right: 15px;
-  word-wrap: break-word;
-  width: calc(16.66667% - 30px);
+header .hello div {
+  margin-bottom: 25px;
+}
+
+header .hello div h3 {
   font-size: 26px;
   font-weight: bold;
+  float: left;
+  margin-right: 50px;
+  margin-top: 0.5rem;
 }
 
-.hello div a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: 15px;
-  margin-right: 15px;
-  word-wrap: break-word;
-  width: calc(16.66667% - 30px);
-  margin-top: -10px;
-  margin-left: -50px;
+header .hello div img {
+  padding-top: -10px;
+  display: block;
+  bottom: 1rem;
 }
 
-.hello h1 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: 15px;
-  margin-right: 15px;
-  word-wrap: break-word;
-  width: calc(100% - 30px);
-  margin-top: 22px;
+header .hello h1 {
   color: #fff;
   font-size: 36px;
   font-weight: bold;
+  clear: both;
 }
 
-.hello button {
+header .hello button {
   margin-top: 45px;
 }
 
 .title h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: 3.6vw;
   font-weight: bold;
 }
 
@@ -302,41 +266,7 @@ header .menu {
 }
 
 #about_me {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
-  max-width: 100%;
-  margin-left: 0;
-}
-
-#about_me h1 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: 15px;
-  margin-right: 15px;
-  word-wrap: break-word;
-  width: calc(100% - 30px);
-  text-align: center;
-  margin-top: 100px;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-#about_me p {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: 15px;
-  margin-right: 15px;
-  word-wrap: break-word;
-  width: calc(100% - 30px);
-  text-align: center;
-  margin-top: 30px;
-  font-size: 10px;
-  font-weight: normal;
+  padding-top: 100px;
 }
 
 #about_me .about-info {
@@ -347,6 +277,10 @@ header .menu {
       flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 60px;
 }
 
 #about_me .about-info .img {
@@ -356,10 +290,7 @@ header .menu {
   margin-right: 15px;
   word-wrap: break-word;
   width: calc(41.66667% - 30px);
-}
-
-#about_me .about-info .img img {
-  padding-top: 23px;
+  vertical-align: top;
 }
 
 #about_me .about-info .info {
@@ -369,6 +300,7 @@ header .menu {
   margin-right: 15px;
   word-wrap: break-word;
   width: calc(58.33333% - 30px);
+  margin-top: 50px;
 }
 
 #about_me .about-info .info h1 {
@@ -377,14 +309,9 @@ header .menu {
   text-align: left;
 }
 
-#about_me .about-info .info .br_bot {
-  padding-bottom: 24px;
-  border-bottom: 3px solid darkorange;
-}
-
 #about_me .about-info .info p {
   margin-top: 60px;
-  text-align: left;
+  text-align: justify;
 }
 
 #about_me .about-info .info .address {
@@ -394,12 +321,16 @@ header .menu {
 #about_me .about-info .info .address span {
   display: block;
   margin-bottom: 20px;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: bold;
 }
 
 #about_me .about-info .info .address span .fa {
   color: darkorange;
+}
+
+#about_me .about-info .info button {
+  margin-bottom: 25px;
 }
 
 #hire {
@@ -467,6 +398,39 @@ header .menu {
   margin-right: 15px;
   word-wrap: break-word;
   width: calc(33.33333% - 30px);
+  margin-bottom: 30px;
+  height: auto;
+  overflow-y: hidden;
+  position: relative;
+}
+
+#services .items .item .over {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#services .items .item .over span {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#services .items .item .over P {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  font-size: 1.5vw;
+  font-weight: normal;
+}
+
+#services .items .item img {
+  display: block;
 }
 
 #contact-me {
@@ -1045,10 +1009,6 @@ footer .smedia .fa {
             justify-content: center;
   }
 
-  #about_me .about-info .img {
-    width: calc(100% - 30px);
-  }
-
   #about_me .about-info .info {
     width: calc(100% - 30px);
   }
@@ -1090,6 +1050,18 @@ footer .smedia .fa {
             justify-content: center;
   }
 
+  #about_me .about-info .img {
+    width: calc(100% - 30px);
+  }
+
+  #about_me .about-info .img img {
+    margin-left: calc(16.66667% + 15px);
+  }
+
+  #about_me .about-info .info {
+    width: calc(100% - 30px);
+  }
+
   #portfolio .items .item {
     width: calc(50% - 30px);
   }
@@ -1115,6 +1087,10 @@ footer .smedia .fa {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  #about_me .about-info .img img {
+    margin-left: calc(0% + 15px);
   }
 
   #services .items .item {

@@ -23,11 +23,9 @@
 html {
   overflow: auto;
   overflow-x: hidden;
-
 }
 body {
   width: 100%;
-
   @include font(15px,bold);
 }
 header {
@@ -38,81 +36,74 @@ header {
   background-size: cover;
   height: 900px;
   max-width: 100%;
-
-
-
-
+  .overlay {
+    width: 100%;
+    height:900px;
+    background-color: rgba(0, 0, 0, 0.36);
+  }
   .logo1 {
-    @include col();
-    @include size(2);
-    @include col-float();
-
+    float:left;
     padding-top:50px;
   }
   .menu {
-    @include col();
-    @include size(12);
-    }
-}
-.overlay {
-  width: 100%;
-  height:900px;
-  background-color: rgba(0, 0, 0, 0.36);
-}
-.menu {
-  padding-top:66px;
-  li {
-    &:first-child {
-      padding-left:150px;
-    }
-    float: left;
-    padding-left:30px;
-    a {
-      &:hover {
-        color: $btn;
+      padding-top:66px;
+      float:right;
+      ul {
+        display: block;
+        li {
+          margin: auto;
+          &:first-child {
+            padding-left: 0;
+          }
+          padding-left: 30px;
+          float:left;
+          a {
+            &:hover {
+              color: $btn;
+            }
+            color: #fff;
+            text-decoration: none;
+          }
+        }
       }
-      color: #fff;
-      text-decoration: none;
-    }
   }
-}
-.hello {
-  @include row-flex();
-  margin-top:240px;
-  div {
-    @include row-flex();
-    @include size(12);
-    h3 {
-      @include col();
-      @include size(2);
-      font-size: 26px;
-      font-weight:bold;
-    }
-    a {
-      @include col();
-      @include size(2);
-      margin-top: -10px;
-      margin-left: -50px;
-    }
+  .hello {
+    position: absolute;
+    top:50%;
     color:$btn;
     font-weight:bold;
-  }
-  h1 {
-    @include col();
-    @include size(12);
-    margin-top:22px;
-    color:#fff;
-    font-size: 36px;
-    font-weight:bold;
-  }
-  button {
-    margin-top:45px;
+    div {
+      margin-bottom: 25px;
+      h3 {
+        font-size: 26px;
+        font-weight: bold;
+        float: left;
+        margin-right: 50px;
+        margin-top:0.5rem;
+      }
+      img {
+        padding-top: -10px;
+        display: block;
+        bottom: 1rem;
+      }
+    }
+    h1 {
+      color:#fff;
+      font-size: 36px;
+      font-weight:bold;
+      clear: both;
+    }
+    button {
+      margin-top:45px;
+    }
   }
 }
+
+
 .title {
    h1 {
      text-align: center;
-     @include font(36px,bold);
+     @include font(3.6vw,bold);
    }
    p {
      margin-top: 30px;
@@ -140,51 +131,39 @@ header {
 .fa {
   color: $btn;
 }
+
 #about_me {
-  @include row-flex();
-  max-width: 100%;
-  margin-left: 0;
-    h1 {
-      @include col();
-      @include size(12);
-      text-align: center;
-      margin-top: 100px;
-      @include font(30px,bold);
-    }
-    p {
-      @include col();
-      @include size(12);
-      text-align: center;
-      margin-top: 30px;
-      @include font(10px,normal);
-    }
+  padding-top: 100px;
 
     .about-info {
       @include row-flex();
+      @include justify-content(center);
+
+      margin-top: 60px;
       .img {
         @include col();
         @include size(5);
-        @include size-md(12);
+        @include size-sm(12);
+        vertical-align: top;
         img {
-          padding-top:23px;
+          @include offset-left-sm(2);
+          @include offset-left-xs(0);
+
         }
       }
       .info {
         @include col();
         @include size(7);
         @include size-md(12);
-
+        @include size-sm(12);
+        margin-top: 50px;
         h1 {
           @include font(14px,bold);
           text-align: left;
         }
-        .br_bot {
-          padding-bottom: 24px;
-          border-bottom: 3px solid $btn;
-        }
         p {
           margin-top:60px;
-          text-align: left;
+          text-align: justify;
         }
 
         .address {
@@ -192,12 +171,14 @@ header {
           span {
             display: block;
             margin-bottom: 20px;
-            @include font(10px,bold);
-
+            @include font(14px,bold);
             .fa {
               color: $btn;
             }
           }
+        }
+        button {
+          margin-bottom: 25px;
         }
       }
     }
@@ -241,11 +222,35 @@ header {
         @include col-md-6();
         @include size-xs(12);
         @include size-xxs(12);
+        margin-bottom: 30px;
+        height: auto;
+        overflow-y: hidden;
+        position: relative;
 
-        &:nth-child(4),
-        &:nth-child(5),
-        &:nth-child(6) {
+        .over {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          bottom: 0;
+          color: #fff;
+          background-color: rgba(0,0,0,0.5);
+          span {
+            position: absolute;
+            bottom:10%;
+            left: 5%;
+            display: block;
+            margin-bottom:10px;
+          }
+           P {
+             position: absolute;
+             bottom:0;
+             left: 5%;
 
+             @include font(1.5vw,normal);
+           }
+        }
+        img {
+          display: block;
         }
       }
     }
