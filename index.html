@@ -9,15 +9,26 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <link rel="stylesheet" href="css/bundle.min.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.menuToggled').on('click', function () {
+                $('.menu').slideToggle(300, function () {
+                    if($(this).css('display') === 'none') {
+                        $(this).removeAttr('style');
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body class="body">
     <header>
         <div class="overlay">
             <div class="wrapper">
                     <div class="header">
-                        <div class="logo1"><img src="img/logo.png" alt=""></div>
-                        <div class="menu">
-                            <ul>
+                        <div class="logo1"><img src="img/logo.png" alt=""></div>                        <div class="">
+                            <ul class="menu clearfix">
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Services</a></li>
@@ -28,6 +39,7 @@
                                 <li><a href="#">Contact Us</a></li>
                             </ul>
                         </div>
+                        <div class="menuToggled">Menu</div>
                     </div>
                     <div class="hello">
                         <div>
@@ -441,7 +453,7 @@
                         <div class="tarea">
                             <textarea name="" id="" cols="25" rows="10" placeholder="Message*"></textarea>
                         </div>
-                            <input class="submit" type="submit" value="Submit">
+                            <input class="btn" type="submit" value="Submit">
                     </form>
                 </div>
             </div>

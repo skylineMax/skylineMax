@@ -35,7 +35,6 @@ header {
   background-size: cover;
   height: 900px;
   max-width: 100%;
-  clear: both;
   .overlay {
     width: 100%;
     height:900px;
@@ -44,28 +43,38 @@ header {
   .header {
     @include size(12);
     width: 100%;
+    position: relative;
     .logo1 {
       float:left;
-      padding-top:50px;
+      margin-top:50px;
+    }
+    .menuToggled {
+      display: none;
+      float: right;
+      margin-top:66px;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        color: $btn;
+      }
     }
     .menu {
-        padding-top:66px;
+        margin-top:66px;
         float:right;
-        ul {
-          display: block;
-          li {
-            margin: auto;
-            &:first-child {
-              padding-left: 0;
-            }
-            padding-left: 30px;
-            float:left;
-            a {
-              &:hover {
-                color: $btn;
-              }
-              color: #fff;
-              text-decoration: none;
+        display: block;
+        li {
+          margin: auto;
+          padding-left: 30px;
+          float:left;
+          &:first-child {
+            padding-left: 0;
+          }
+          a {
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+              color: $btn;
             }
           }
         }
@@ -120,6 +129,7 @@ header {
       color:$btn;
       background-color: #fff;
       border: 1px solid $btn;
+      cursor: pointer;
     }
 
     background-color: $btn;
@@ -253,10 +263,11 @@ img {
             border: 1px solid $btn;
             border-radius: 50%;
             color: $btn;
-
+            
             &:hover {
               background:$btn;
               color: #fff;
+              cursor: pointer;
               .fa {
                 color: #fff;
                 transform: rotate(90deg);
@@ -559,6 +570,7 @@ img {
             bottom: 42%;
             &:hover {
               background: #fff;
+              cursor: pointer;
               .fa {
                 color: $btn;
               }
@@ -648,7 +660,7 @@ img {
       @include size-md(6);
       @include size-sm(12);
       @include size-xs(12);
-
+      text-align: justify;
       padding:0 30px 30px 30px;
       .bg{
         background-color: #f5f5f5;
@@ -733,15 +745,6 @@ img {
         background: transparent;
         border: 1px solid #fff;
         color: #fff;
-        .name {
-
-        }
-        .email {
-
-        }
-        .subject {
-
-        }
       }
     }
     .tarea {
@@ -768,16 +771,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    .submit {
-      background-color: $btn;
-      border: 1px solid $btn;
-      color: #fff;
+    .btn {
       margin-top:25px;
-      padding: 16px 32px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
     }
   }
 }
@@ -821,6 +816,30 @@ footer {
         }
       }
     }
+  }
+
+}
+
+@media screen and (max-width: 960px){
+  header .header .menu {
+    display: none;
+    position: absolute;
+    top:86px;
+    right:0;
+    float: none;
+    margin-top:0;
+  }
+  header .header .menu li {
+    float:none;
+    text-align: center;
+    padding-top: 10px;
+    background: rgba(0,0,0,0.5);
+
+    width: 100%;
+    padding-left: 0;
+  }
+  header .header .menuToggled {
+    display: block;
   }
 
 }
