@@ -27,7 +27,7 @@ body {
     overflow: hidden;
   }
 }
-header {
+#headerSection {
   @include row-flex();
   @include justify-content-xs(center);
   margin-left: 0;
@@ -149,8 +149,8 @@ img {
   display: block;
 }
 
-#about_me {
-  margin-top:100px;
+#about_meSection {
+  padding-top:100px;
 
     .about-info {
       @include row-flex();
@@ -202,7 +202,7 @@ img {
     }
   }
 
-#hire {
+#hireSection {
     @include row-flex();
     margin-left: 0;
     height: 300px;
@@ -226,8 +226,8 @@ img {
     }
   }
 
-#services {
-    margin:100px 0 70px 0;
+#servicesSection {
+    padding:100px 0 70px 0;
 
     .items {
       @include row-flex();
@@ -297,7 +297,7 @@ img {
     }
   }
 
-#contact-me {
+#contact-meSection {
   @include row-flex();
   margin-left: 0;
   height: 300px;
@@ -320,8 +320,8 @@ img {
   }
 }
 
-#team {
-  margin:100px 0 70px 0;
+#teamSection {
+  padding:100px 0 70px 0;
   .team-members {
     @include row-flex();
     margin-top: 60px;
@@ -419,7 +419,7 @@ img {
   }
 }
 
-#stats {
+#statsSection {
   padding: 100px 0;
   max-width:100%;
   background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
@@ -500,8 +500,8 @@ img {
   }
 }
 
-#portfolio {
-  margin:100px 0 70px 0;
+#portfolioSection {
+  padding:100px 0 70px 0;
     .items {
       @include row-flex();
       @include justify-content(center);
@@ -584,7 +584,7 @@ img {
     }
 }
 
-#members {
+#membersSection {
   padding:100px 0 70px 0;
   max-width: 100%;
   background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
@@ -646,8 +646,8 @@ img {
       }
 }}}
 
-#latest_news {
-  margin:100px 0 70px 0;
+#latest_newsSection {
+  padding:100px 0 70px 0;
   .items {
     @include row-flex();
     @include justify-content(center);
@@ -711,7 +711,7 @@ img {
   }
 }
 
-#contact_me {
+#contact_meSection {
   padding: 100px 0;
   background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
   background-size: cover;
@@ -821,7 +821,7 @@ footer {
 }
 
 @media screen and (max-width: 960px){
-  header .header .menu {
+  #headerSection .header .menu {
     display: none;
     position: absolute;
     top:86px;
@@ -829,7 +829,7 @@ footer {
     float: none;
     margin-top:0;
   }
-  header .header .menu li {
+  #headerSection .header .menu li {
     float:none;
     text-align: center;
     padding-top: 10px;
@@ -838,7 +838,7 @@ footer {
     width: 100%;
     padding-left: 0;
   }
-  header .header .menuToggled {
+  #headerSection .header .menuToggled {
     display: block;
   }
 

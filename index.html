@@ -10,33 +10,23 @@
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <link rel="stylesheet" href="css/bundle.min.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script>
-        $(function () {
-            $('.menuToggled').on('click', function () {
-                $('.menu').slideToggle(300, function () {
-                    if($(this).css('display') === 'none') {
-                        $(this).removeAttr('style');
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </head>
 <body class="body">
-    <header>
+    <header id="headerSection">
         <div class="overlay">
             <div class="wrapper">
                     <div class="header">
                         <div class="logo1"><img src="img/logo.png" alt=""></div>                        <div class="">
                             <ul class="menu clearfix">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Client's</a></li>
-                                <li><a href="#">Latest News</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a id="header" href="#headerSection">Home</a></li>
+                                <li><a id="about_me" href="#about_meSection">About</a></li>
+                                <li><a id="services" href="#servicesSection">Services</a></li>
+                                <li><a id="team" href="#teamSection">Team</a></li>
+                                <li><a id="portfolio" href="#portfolioSection">Portfolio</a></li>
+                                <li><a id="members" href="#membersSection">Client's</a></li>
+                                <li><a id="latest_news" href="#latest_newsSection">Latest News</a></li>
+                                <li><a id="contact_me" href="#contact_meSection">Contact Us</a></li>
                             </ul>
                         </div>
                         <div class="menuToggled">Menu</div>
@@ -52,7 +42,7 @@
         </div>
     </header>
     <main>
-        <section id="about_me">
+        <section id="about_meSection">
             <div class="wrapper">
                 <div class="title">
                     <h1>About Me</h1>
@@ -74,13 +64,13 @@
                 </div>
             </div>
         </section>
-        <section id="hire">
+        <section id="hireSection">
             <div class="wrapper">
                 <h1>Do You Have Interest Any Project With Me?</h1>
                 <div class="btnh"><button class="btn">Hire Me!</button></div>
             </div>
         </section>
-        <section id="services">
+        <section id="servicesSection">
             <div class="wrapper">
                 <div class="title">
                     <h1>Services</h1>
@@ -140,13 +130,13 @@
                 </div>
             </div>
         </section>
-        <section id="contact-me">
+        <section id="contact-meSection">
             <div class="wrapper">
                 <h1>If You Need Any Work Please Contact Me !</h1>
                 <div class="btnh"><button class="btn">Contact Me!</button></div>
             </div>
         </section>
-        <section id="team">
+        <section id="teamSection">
             <div class="wrapper">
                 <div class="title">
                     <h1>Team</h1>
@@ -231,7 +221,7 @@
                 </div>
             </div>
         </section>
-        <section id="stats">
+        <section id="statsSection">
             <div class="wrapper">
                 <div class="diagrams">
                     <div class="diagram">
@@ -272,7 +262,7 @@
                 </div>
             </div>
         </section>
-        <section id="portfolio">
+        <section id="portfolioSection">
             <div class="wrapper">
                 <div class="title">
                     <h1>Portfolio</h1>
@@ -363,7 +353,7 @@
                 </div>
             </div>
         </section>
-        <section id="members">
+        <section id="membersSection">
             <div class="wrapper">
                 <div class="items">
                     <div class="item">
@@ -391,7 +381,7 @@
                 </div>
             </div>
         </section>
-        <section id="latest_news">
+        <section id="latest_newsSection">
             <div class="wrapper">
                 <div class="title">
                     <h1>Latest News</h1>
@@ -437,7 +427,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact_me">
+        <section id="contact_meSection">
             <div class="wrapper">
                 <div class="title">
                     <h1>Contact Me</h1>
