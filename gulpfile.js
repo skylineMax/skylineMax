@@ -38,7 +38,7 @@ var smartgridSettings = {
             fields: '30px'
         },
         xxs: {
-            width: '320px',
+            width: '420px',
             fields: '30px'
         }
 

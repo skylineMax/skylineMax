@@ -129,15 +129,14 @@ img {
   letter-spacing: 2px;
 }
 
-html {
-  overflow: auto;
-  overflow-x: hidden;
-}
-
 body {
   width: 100%;
   font-size: 15px;
   font-weight: bold;
+}
+
+body main {
+  overflow: hidden;
 }
 
 header {
@@ -153,6 +152,7 @@ header {
   background-size: cover;
   height: 900px;
   max-width: 100%;
+  clear: both;
 }
 
 header .overlay {
@@ -161,44 +161,49 @@ header .overlay {
   background-color: rgba(0, 0, 0, 0.36);
 }
 
-header .logo1 {
+header .header {
+  width: calc(100% - 30px);
+  width: 100%;
+}
+
+header .header .logo1 {
   float: left;
   padding-top: 50px;
 }
 
-header .menu {
+header .header .menu {
   padding-top: 66px;
   float: right;
 }
 
-header .menu ul {
+header .header .menu ul {
   display: block;
 }
 
-header .menu ul li {
+header .header .menu ul li {
   margin: auto;
   padding-left: 30px;
   float: left;
 }
 
-header .menu ul li:first-child {
+header .header .menu ul li:first-child {
   padding-left: 0;
 }
 
-header .menu ul li a {
+header .header .menu ul li a {
   color: #fff;
   text-decoration: none;
 }
 
-header .menu ul li a:hover {
+header .header .menu ul li a:hover {
   color: darkorange;
 }
 
 header .hello {
-  position: absolute;
-  top: 50%;
+  padding-top: 300px;
   color: darkorange;
   font-weight: bold;
+  max-width: 100%;
 }
 
 header .hello div {
@@ -270,7 +275,7 @@ img {
 }
 
 #about_me {
-  margin: 100px 0 70px 0;
+  margin-top: 100px;
 }
 
 #about_me .about-info {
@@ -294,7 +299,6 @@ img {
   margin-right: 15px;
   word-wrap: break-word;
   width: calc(41.66667% - 30px);
-  vertical-align: top;
 }
 
 #about_me .about-info .img img {
@@ -693,6 +697,7 @@ img {
   margin-right: 15px;
   word-wrap: break-word;
   width: calc(25% - 30px);
+  margin-bottom: 20px;
 }
 
 #stats .diagrams .diagram div {
@@ -706,9 +711,10 @@ img {
 }
 
 #stats .diagrams .diagram .circle {
-  left: 33.33%;
   width: 100px;
   height: 100px;
+  margin: 0 auto;
+  margin-bottom: 20px;
   overflow: hidden;
   border: 1px solid darkorange;
   border-radius: 50%;
@@ -893,6 +899,7 @@ img {
   background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
   background-size: cover;
   color: #fff;
+  text-align: justify;
 }
 
 #members .items {
@@ -1068,6 +1075,7 @@ img {
 
 #contact_me .title {
   color: #fff;
+  margin-bottom: 60px;
 }
 
 #contact_me form {
@@ -1078,59 +1086,76 @@ img {
       flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
-  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#contact_me form input {
+#contact_me form .inputs {
+  width: calc(50% - 30px);
+  clear: both;
+  height: 190px;
+}
+
+#contact_me form .inputs input {
+  width: calc(100% - 30px);
+  display: block;
+  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 15px;
-  margin-right: 15px;
-  word-wrap: break-word;
-  width: calc(41.66667% - 30px);
-  border: 1px solid #fff;
-  padding: 10px;
-  background: transparent;
   margin-bottom: 20px;
-  margin-right: 20px;
+  padding: 15px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
-#contact_me form input .name {
-  position: absolute;
+#contact_me form .inputs input:first-child {
+  margin-top: 20px;
 }
 
-#contact_me form input .email {
-  position: absolute;
-  top: 33.33%;
+#contact_me form .inputs input:last-child {
+  margin-bottom: 0;
 }
 
-#contact_me form input .subject {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-#contact_me form textarea {
+#contact_me form .tarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-left: 15px;
   margin-right: 15px;
   word-wrap: break-word;
-  width: calc(41.66667% - 30px);
+  width: calc(50% - 30px);
+  clear: both;
+  margin-top: 20px;
+}
+
+#contact_me form .tarea textarea {
+  width: calc(100% - 30px);
+  height: 190px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  margin-top: 20px;
+  display: block;
   padding: 10px;
+  border: 1px solid #fff;
   background: transparent;
-  position: absolute;
-  right: 0;
+  resize: none;
+  color: #fff;
 }
 
 #contact_me form .submit {
   background-color: darkorange;
   border: 1px solid darkorange;
   color: #fff;
+  margin-top: 25px;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   font-weight: bold;
 }
@@ -1141,64 +1166,60 @@ footer {
   padding: 40px 0;
 }
 
-footer .smedia {
-  float: right;
+footer .foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
 }
 
-footer .smedia::after {
-  display: block;
-  content: "";
-  clear: both;
-}
-
-footer .smedia .hov {
+footer .foot .copy {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-left: 15px;
   margin-right: 15px;
   word-wrap: break-word;
-  width: calc(16.66667% - 30px);
+  width: calc(50% - 30px);
+  padding-top: 7px;
+}
+
+footer .foot .smedia {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(50% - 30px);
+}
+
+footer .foot .smedia .hov {
+  float: right;
   margin: 0;
-  float: left;
   width: 30px;
   height: 30px;
-  display: block;
   border: 1px solid transparent;
   border-radius: 50%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-footer .smedia .hov:hover {
+footer .foot .smedia .hov:hover {
   background-color: darkorange;
 }
 
-footer .smedia .hov .fa {
+footer .foot .smedia .hov .fa {
   position: absolute;
-  left: 33.33%;
-  top: 33.33%;
-}
-
-footer .smedia .hov .fa-twitter {
-  position: absolute;
-  left: 25%;
-  top: 25%;
-}
-
-footer .smedia .hov .fa-linkedin {
-  position: absolute;
-  left: 27%;
-  top: 25%;
-}
-
-footer .smedia .hov .fa-google-plus {
-  position: absolute;
-  left: 18%;
-  top: 25%;
-}
-
-footer .smedia .fa {
   color: #fff;
 }
 
@@ -1237,6 +1258,14 @@ footer .smedia .fa {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  #about_me .about-info .img {
+    width: calc(100% - 30px);
+  }
+
+  #about_me .about-info .img img {
+    margin-left: calc(25% + 15px);
   }
 
   #about_me .about-info .info {
@@ -1303,6 +1332,14 @@ footer .smedia .fa {
   #latest_news .items .item {
     width: calc(100% - 30px);
   }
+
+  #contact_me form .inputs {
+    width: calc(100% - 30px);
+  }
+
+  #contact_me form .tarea {
+    width: calc(100% - 30px);
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -1352,13 +1389,21 @@ footer .smedia .fa {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 420px) {
   .wrapper {
     padding-left: 30px;
     padding-right: 30px;
   }
 
   #services .items .item {
+    width: calc(100% - 30px);
+  }
+
+  footer .foot .copy {
+    width: calc(100% - 30px);
+  }
+
+  footer .foot .smedia {
     width: calc(100% - 30px);
   }
 }

@@ -20,13 +20,12 @@
     }
   }
 }
-html {
-  overflow: auto;
-  overflow-x: hidden;
-}
 body {
   width: 100%;
   @include font(15px,bold);
+  main {
+    overflow: hidden;
+  }
 }
 header {
   @include row-flex();
@@ -36,42 +35,47 @@ header {
   background-size: cover;
   height: 900px;
   max-width: 100%;
+  clear: both;
   .overlay {
     width: 100%;
     height:900px;
     background-color: rgba(0, 0, 0, 0.36);
   }
-  .logo1 {
-    float:left;
-    padding-top:50px;
-  }
-  .menu {
-      padding-top:66px;
-      float:right;
-      ul {
-        display: block;
-        li {
-          margin: auto;
-          &:first-child {
-            padding-left: 0;
-          }
-          padding-left: 30px;
-          float:left;
-          a {
-            &:hover {
-              color: $btn;
+  .header {
+    @include size(12);
+    width: 100%;
+    .logo1 {
+      float:left;
+      padding-top:50px;
+    }
+    .menu {
+        padding-top:66px;
+        float:right;
+        ul {
+          display: block;
+          li {
+            margin: auto;
+            &:first-child {
+              padding-left: 0;
             }
-            color: #fff;
-            text-decoration: none;
+            padding-left: 30px;
+            float:left;
+            a {
+              &:hover {
+                color: $btn;
+              }
+              color: #fff;
+              text-decoration: none;
+            }
           }
         }
-      }
+    }
   }
   .hello {
-    position: absolute;
-    top:50%;
+    padding-top: 300px;
     color:$btn;
     font-weight:bold;
+    max-width: 100%;
     div {
       margin-bottom: 25px;
       h3 {
@@ -136,7 +140,7 @@ img {
 }
 
 #about_me {
-  margin:100px 0 70px 0;
+  margin-top:100px;
 
     .about-info {
       @include row-flex();
@@ -146,9 +150,10 @@ img {
       .img {
         @include col();
         @include size(5);
+        @include size-md(12);
         @include size-sm(12);
-        vertical-align: top;
         img {
+          @include offset-left-md(3);
           @include offset-left-sm(2);
           @include offset-left-xs(0);
           display: block;
@@ -416,7 +421,7 @@ img {
       @include size-md(6);
       @include size-xs(12);
 
-
+      margin-bottom:20px;
       div {
         color:#fff;
         text-align: center;
@@ -426,9 +431,10 @@ img {
         }
       }
       .circle{
-        left:33.33%;
         width: 100px;
         height: 100px;
+        margin: 0 auto;
+        margin-bottom: 20px;
         overflow: hidden;
         border: 1px solid $btn;
         border-radius: 50%;
@@ -572,6 +578,7 @@ img {
   background-image: linear-gradient(0, black 10%, transparent 100%), url(../img/hire_bg.png);
   background-size: cover;
   color: #fff;
+  text-align: justify;
   .items {
     @include row-flex();
     @include justify-content(center);
@@ -698,53 +705,77 @@ img {
   background-size: cover;
   .title {
     color: #fff;
+    margin-bottom:60px;
   }
 
   form {
     @include row-flex();
-    position: relative;
-    input {
-      @include col();
-      @include size(5);
+    .inputs {
+      @include size(6);
+      @include size-sm(12);
+      clear: both;
+      height: 190px;
 
-      border: 1px solid #fff;
-      padding: 10px;
-      background: transparent;
-      margin-bottom:20px;
-      margin-right:20px;
+      input {
+        @include size(12);
+        display: block;
+        width: 100%;
+        box-sizing : border-box;
 
-      .name {
-        position: absolute;
+        margin-bottom: 20px;
+        &:first-child {
+          margin-top:20px;
+        }
+        &:last-child {
+          margin-bottom:0;
+        }
+        padding: 15px;
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        .name {
 
-      }
-      .email {
-        position: absolute;
+        }
+        .email {
 
-        top:33.33%;
-      }
-      .subject {
-        position: absolute;
-        left:0;
-        bottom:0;
+        }
+        .subject {
+
+        }
       }
     }
-    textarea {
+    .tarea {
       @include col();
-      @include size(5);
+      @include size(6);
+      @include size-sm(12);
+      clear: both;
+      margin-top:20px;
+      textarea {
+        @include size(12);
+        height: 190px;
+        box-sizing : border-box;
+        width: 100%;
+        margin-top:20px;
+        display: block;
+        padding: 10px;
+        border: 1px solid #fff;
+        background: transparent;
+        resize: none;
+        color: #fff;
+      }
 
-      padding: 10px;
-      background: transparent;
-      position: absolute;
-      right:0;
     }
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .submit {
       background-color: $btn;
       border: 1px solid $btn;
       color: #fff;
+      margin-top:25px;
       padding: 16px 32px;
       text-align: center;
       text-decoration: none;
-      display: inline-block;
       font-size: 16px;
       font-weight: bold;
     }
@@ -755,50 +786,41 @@ footer {
   color: #fff;
   background-color: darkslategray;
   padding:40px 0;
+  .foot {
+    @include row-flex();
 
-
-  .smedia {
-    float:right;
-    @include row-float();
-    .hov {
+    .copy {
       @include col();
-      @include size(2);
-      margin: 0;
-      float: left;
-      width: 30px;
-      height: 30px;
-      display: block;
-      border: 1px solid transparent;
-      border-radius: 50%;
-      position: relative;
-      &:hover {
-        background-color: $btn;
-      }
-
-      .fa {
-        position: absolute;
-        left: 33.33%;
-        top: 33.33%;
-      }
-      .fa-twitter {
-        position: absolute;
-        left: 25%;
-        top: 25%;
-      }
-      .fa-linkedin {
-        position: absolute;
-        left: 27%;
-        top: 25%;
-      }
-      .fa-google-plus {
-        position: absolute;
-        left: 18%;
-        top: 25%;
-      }
+      @include size(6);
+      @include size-xxs(12);
+      padding-top:7px;
     }
-    .fa {
-      color: #fff;
+    .smedia {
+      @include col();
+      @include size(6);
+      @include size-xxs(12);
 
+      .hov {
+        float: right;
+        margin: 0;
+
+        width: 30px;
+        height: 30px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        position: relative;
+        &:hover {
+          background-color: $btn;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .fa {
+          position: absolute;
+          color: #fff;
+        }
+      }
     }
   }
+
 }
