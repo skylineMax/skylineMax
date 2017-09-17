@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <link rel="stylesheet" href="css/bundle.min.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -17,8 +16,11 @@
         <div class="overlay">
             <div class="wrapper">
                     <div class="header">
-                        <div class="logo1"><img src="img/logo.png" alt=""></div>                        <div class="">
-                            <ul class="menu clearfix">
+                        <div class="logo1"><img src="img/logo.png" alt=""></div>
+                        <nav class="mmenu">
+                            <label class="menuToggle" for="menuCheck">Menu</label>
+                            <input id="menuCheck" type="checkbox">
+                            <ul class="menu">
                                 <li><a id="header" href="#headerSection">Home</a></li>
                                 <li><a id="about_me" href="#about_meSection">About</a></li>
                                 <li><a id="services" href="#servicesSection">Services</a></li>
@@ -28,8 +30,8 @@
                                 <li><a id="latest_news" href="#latest_newsSection">Latest News</a></li>
                                 <li><a id="contact_me" href="#contact_meSection">Contact Us</a></li>
                             </ul>
-                        </div>
-                        <div class="menuToggled">Menu</div>
+                            <a class="close" href="#"><img src="./img/menu-close-btn.png" alt=""></a>
+                        </nav>
                     </div>
                     <div class="hello">
                         <div>

@@ -171,17 +171,14 @@ body main {
   margin-top: 50px;
 }
 
-#headerSection .header .menuToggled {
+#headerSection .header .close {
+  position: absolute;
   display: none;
-  float: right;
-  margin-top: 66px;
-  font-size: 20px;
-  color: #fff;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-}
-
-#headerSection .header .menuToggled:hover {
-  color: darkorange;
 }
 
 #headerSection .header .menu {
@@ -207,6 +204,23 @@ body main {
 
 #headerSection .header .menu li a:hover {
   color: darkorange;
+}
+
+#headerSection .header .menuToggle {
+  display: none;
+  float: right;
+  margin-top: 66px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#headerSection .header .menuToggle:hover {
+  color: darkorange;
+}
+
+#headerSection .header #menuCheck {
+  display: none;
 }
 
 #headerSection .hello {
@@ -1304,24 +1318,35 @@ footer .foot .smedia .hov .fa {
 
   #headerSection .header .menu {
     display: none;
-    position: absolute;
-    top: 86px;
-    right: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
     float: none;
     margin-top: 0;
+    background: #2589bf;
   }
 
   #headerSection .header .menu li {
     float: none;
     text-align: center;
-    padding-top: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
+    padding-top: 40px;
     padding-left: 0;
   }
 
-  #headerSection .header .menuToggled {
+  #headerSection .header .menuToggle {
     display: block;
+  }
+
+  .menu-active {
+    overflow: hidden;
+    position: fixed;
+  }
+
+  .menu-active .wrapper {
+    padding: 0;
   }
 }
 

@@ -20,6 +20,7 @@
     }
   }
 }
+
 body {
   width: 100%;
   @include font(15px,bold);
@@ -48,25 +49,23 @@ body {
       float:left;
       margin-top:50px;
     }
-    .menuToggled {
+    .close {
+      position: absolute;
       display: none;
-      float: right;
-      margin-top:66px;
-      font-size: 20px;
-      color: #fff;
+      top: 30px;
+      right:30px;
+      width: 30px;
+      height: 30px;
       cursor: pointer;
-      &:hover {
-        color: $btn;
-      }
     }
-    .menu {
-        margin-top:66px;
-        float:right;
+      .menu {
+        margin-top: 66px;
+        float: right;
         display: block;
         li {
           margin: auto;
           padding-left: 30px;
-          float:left;
+          float: left;
           &:first-child {
             padding-left: 0;
           }
@@ -78,6 +77,20 @@ body {
             }
           }
         }
+      }
+    .menuToggle {
+      display: none;
+      float: right;
+      margin-top:66px;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        color: $btn;
+      }
+    }
+    #menuCheck {
+      display: none;
     }
   }
   .hello {
@@ -823,23 +836,30 @@ footer {
 @media screen and (max-width: 960px){
   #headerSection .header .menu {
     display: none;
-    position: absolute;
-    top:86px;
-    right:0;
+    position: fixed;
+    top:0;
+    bottom:0;
+    width: 100%;
+    @include font(30px,bold);
     float: none;
     margin-top:0;
+    background: #2589bf;
   }
   #headerSection .header .menu li {
     float:none;
     text-align: center;
-    padding-top: 10px;
-    background: rgba(0,0,0,0.5);
+    padding-top: 40px;
 
-    width: 100%;
     padding-left: 0;
   }
-  #headerSection .header .menuToggled {
+  #headerSection .header .menuToggle {
     display: block;
   }
-
+  .menu-active {
+    overflow: hidden;
+    position: fixed;
+    .wrapper {
+      padding: 0;
+    }
+  }
 }

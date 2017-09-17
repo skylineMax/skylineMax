@@ -79,10 +79,12 @@ gulp.task('html', function () {
     gulp.src('index.html')
         .pipe(connect.reload());
 });
+
 gulp.task('watch', function () {
     gulp.watch('css/*.css',['css']);
     gulp.watch('index.html',['html']);
     gulp.watch('src/scss/*.scss',['css']);
+    gulp.watch('js/*.js', ['']);
 });
 
 gulp.task('default', ['connect','css','uncss','html','watch', 'smartgrid']);

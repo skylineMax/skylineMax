@@ -1,16 +1,18 @@
 $(function () {
-    $('.menuToggled').on('click', function () {
-        $('.menu').slideToggle(300, function () {
-            if($(this).css('display') === 'none') {
-                $(this).removeAttr('style');
-            }
-        });
+    $('.menuToggle').click(function () {
+        $('html').addClass('menu-active');
+        $('.menu').css('display', 'block');
+        $('.close').css('display', 'block');
     });
-    getToId();
-});
-
-function getToId() {
+    $('.close').click(function () {
+        $('html').removeClass('menu-active');
+        $('.menu').css('display', 'none');
+        $('.close').css('display', 'none');
+    });
     $('.menu a').click(function (e) {
+        $('html').removeClass('menu-active');
+        $('.menu').css('display', 'none');
+        $('.close').css('display', 'none');
         e.preventDefault();
         var sectionID = e.currentTarget.id + "Section";
         $('html body').animate({
@@ -19,4 +21,5 @@ function getToId() {
 
     });
 
-}
+});
+
