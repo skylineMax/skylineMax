@@ -837,6 +837,7 @@ footer {
   #headerSection .header .menu {
     display: none;
     position: fixed;
+    flex-direction: column;
     top:0;
     bottom:0;
     width: 100%;
@@ -848,10 +849,10 @@ footer {
   }
   #headerSection .header .menu li {
     float:none;
+    display: block;
     text-align: center;
-    padding-top: auto;
-
     padding-left: 0;
+    width: 100%;
   }
   #headerSection .header .menuToggle {
     display: block;

@@ -1,18 +1,19 @@
 $(function () {
     $('.menuToggle').click(function () {
         $('html').addClass('menu-active');
-        $('.menu').css('display', 'block');
+        $('.menu').css('display', 'flex');
         $('.close').css('display', 'block');
     });
-    $('.close').click(function () {
+    $('.menu a, .close').click(function () {
         $('html').removeClass('menu-active');
-        $('.menu').css('display', 'none');
+        $('.menu').hide(0,function () {
+            if($(this).css('display') === 'none') {
+                $(this).removeAttr('style');
+            }
+        });
         $('.close').css('display', 'none');
     });
     $('.menu a').click(function (e) {
-        $('html').removeClass('menu-active');
-        $('.menu').css('display', 'none');
-        $('.close').css('display', 'none');
         e.preventDefault();
         var sectionID = e.currentTarget.id + "Section";
         $('html body').animate({
