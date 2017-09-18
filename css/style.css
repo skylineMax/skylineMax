@@ -1322,6 +1322,7 @@ footer .foot .smedia .hov .fa {
     top: 0;
     bottom: 0;
     width: 100%;
+    height: auto;
     font-size: 30px;
     font-weight: bold;
     float: none;
@@ -1332,7 +1333,7 @@ footer .foot .smedia .hov .fa {
   #headerSection .header .menu li {
     float: none;
     text-align: center;
-    padding-top: 40px;
+    padding-top: auto;
     padding-left: 0;
   }
 

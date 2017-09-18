@@ -840,6 +840,7 @@ footer {
     top:0;
     bottom:0;
     width: 100%;
+    height: auto;
     @include font(30px,bold);
     float: none;
     margin-top:0;
@@ -848,7 +849,7 @@ footer {
   #headerSection .header .menu li {
     float:none;
     text-align: center;
-    padding-top: 40px;
+    padding-top: auto;
 
     padding-left: 0;
   }
