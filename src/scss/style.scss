@@ -832,6 +832,33 @@ footer {
   }
 
 }
+.scrolltop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0,0,0,.75);
+  opacity: .75;
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    opacity: 1;
+    transition: .3s;
+  }
+  &:after {
+    content: "⇪";
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+  }
+}
+
 
 @media screen and (max-width: 960px){
   #headerSection .header .menu {

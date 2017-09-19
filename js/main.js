@@ -1,8 +1,9 @@
-$(function () {
+$(document).ready(function () {
     $('.menuToggle').click(function () {
         $('html').addClass('menu-active');
         $('.menu').css('display', 'flex');
         $('.close').css('display', 'block');
+        $('.scrolltop').css('display', 'none');
     });
     $('.menu a, .close').click(function () {
         $('html').removeClass('menu-active');
@@ -12,8 +13,10 @@ $(function () {
             }
         });
         $('.close').css('display', 'none');
+        $('.scrolltop').css('display', 'block');
     });
     $('.menu a').click(function (e) {
+        $('.scrolltop').css('display', 'block');
         e.preventDefault();
         var sectionID = e.currentTarget.id + "Section";
         $('html body').animate({
@@ -22,5 +25,12 @@ $(function () {
 
     });
 
+    $('.scrolltop').on('click', function () {
+        $('body, html').animate({
+            scrollTop: 0
+        }, 400);
+    });
+
 });
+
 
